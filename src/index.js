@@ -5,8 +5,8 @@ import fetchNews from './fetchNews.mjs';
 config();
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
-const channelId = '@tamecalm'; 
-const userId = '494218147'; // Your user ID
+const channelId = '@YOUR_CHANNEL_USERNAME'; 
+const userId = 'YOUR_USEE_ID'; // Your user ID
 
 // Function to send a message in chunks without breaking words
 const sendMessageInChunks = async (chatId, message) => {
