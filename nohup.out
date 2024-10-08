@@ -1,0 +1,36 @@
+node:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module '/data/data/com.termux/files/home/my-telegram-bot/npm'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.17.0
+/data/data/com.termux/files/home/my-telegram-bot/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/data/data/com.termux/files/home/my-telegram-bot/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/data/data/com.termux/files/home/my-telegram-bot/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/data/data/com.termux/files/home/my-telegram-bot/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/data/data/com.termux/files/home/my-telegram-bot/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.17.0
